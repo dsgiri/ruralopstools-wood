@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Calculator, AlertTriangle, FileCheck, CheckCircle2 } from 'lucide-react';
 import { AdSensePlaceholder } from '../../components/AdSensePlaceholder';
+import { CalculatorDisclaimer } from '../../components/CalculatorDisclaimer';
 
 export function BoardFootCalculator() {
   const [thickness, setThickness] = useState<number>(1);
@@ -113,6 +114,8 @@ export function BoardFootCalculator() {
               </div>
             </div>
           </div>
+          
+          <CalculatorDisclaimer />
           
           <AdSensePlaceholder slot="tool_sidebar_ad" />
         </div>

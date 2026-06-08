@@ -7,8 +7,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Favorites } from './pages/Favorites';
-import { About, Contact, Legal, License } from './pages/StaticPages';
+import { About, Contact, Legal, License, DisclaimerPage } from './pages/StaticPages';
 import { BoardFootCalculator } from './pages/tools/BoardFootCalculator';
+
+import { Portfolio } from './pages/Portfolio';
 
 // Fallback for tools without specific pages
 function ToolPlaceholder() {
@@ -35,6 +37,8 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/license" element={<License />} />
+          <Route path="/disclaimer" element={<DisclaimerPage />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           
           {/* Tools */}
           <Route path="/tools/board-foot" element={<BoardFootCalculator />} />

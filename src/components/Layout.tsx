@@ -18,7 +18,8 @@ const FOOTER_LINKS = [
   { path: 'https://ruralutilitycost.com/contact', label: 'Contact Us', isExternal: true },
   { path: 'https://ruralutilitycost.com/privacy-policy', label: 'Privacy Policy', isExternal: true },
   { path: 'https://ruralutilitycost.com/terms-of-use', label: 'Terms of Use', isExternal: true },
-  { path: 'https://ruralutilitycost.com/disclaimer', label: 'Disclaimer', isExternal: true },
+  { path: '/disclaimer', label: 'Disclaimer', isExternal: false },
+  { path: '/portfolio', label: 'Network Portfolio', isExternal: false },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -97,8 +98,9 @@ export function Layout({ children }: { children: ReactNode }) {
             )
           ))}
         </div>
-        <div className="text-[10px] italic opacity-60 text-center md:text-right">
-          Results are estimates for support only. Verify independently. &copy; {new Date().getFullYear()} Rural Utility Cost
+        <div className="text-[10px] italic opacity-80 text-center md:text-right max-w-sm ml-auto text-[#8C7A6B]">
+          <span className="block mb-1">Disclaimer: These figures are estimates. This tool does not replace professional advice. We disclaim all liability. <Link to="/disclaimer" className="underline hover:text-white transition-colors">Read Full Disclaimer</Link>.</span>
+          &copy; {new Date().getFullYear()} Rural Utility Cost
         </div>
       </footer>
     </div>
