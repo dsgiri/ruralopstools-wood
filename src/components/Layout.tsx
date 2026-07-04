@@ -5,12 +5,10 @@ import { ShieldCheck, HardHat, FileText, Anchor } from 'lucide-react';
 import { FOOTER_LINKS } from '../config/footerLinks';
 
 const NAV_LINKS = [
-  { path: '/', label: 'Home' },
   { path: '/plan', label: 'Plan', isExternal: true },
   { path: '/forecast', label: 'Forecast', isExternal: true },
   { path: '/what-if', label: 'What If', isExternal: true },
   { path: '/predictor', label: 'Predictor', isExternal: true },
-  { path: '/', label: 'Wood' },
   { path: '/favorites', label: 'My favorites' },
 ];
 

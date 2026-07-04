@@ -1,7 +1,6 @@
 import { TOOLS } from '../data/tools';
 import { ToolCard } from '../components/ToolCard';
 import { useFavorites } from '../hooks/use-favorites';
-import { AdSensePlaceholder } from '../components/AdSensePlaceholder';
 
 export function Home() {
   const { favorites, toggleFavorite } = useFavorites();
@@ -37,8 +36,6 @@ export function Home() {
               <ToolCard key={tool.id} tool={tool} />
             ))}
           </div>
-
-          <AdSensePlaceholder slot="in_content_ad" className="mt-8" />
         </section>
 
         {/* Aside / Favorites */}
@@ -63,8 +60,6 @@ export function Home() {
                 )}
              </div>
           </div>
-          
-          <AdSensePlaceholder slot="sidebar_bottom_ad" className="min-h-[250px] !m-0" />
           
           <div className="bg-[#5A4633] text-white rounded-xl p-5 mt-auto">
             <h4 className="text-xs font-black uppercase tracking-widest opacity-70 mb-2">Pro Tip</h4>

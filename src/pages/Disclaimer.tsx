@@ -1,6 +1,5 @@
 import { AlertCircle, FileText, Scale } from 'lucide-react';
 import { FULL_DISCLAIMER_TEXT } from '../components/CalculatorDisclaimer';
-import { AdSensePlaceholder } from '../components/AdSensePlaceholder';
 import { Link } from 'react-router-dom';
 
 export function Disclaimer() {
@@ -27,8 +26,6 @@ export function Disclaimer() {
           Please read this disclaimer carefully before using any tools, calculators, or estimators provided on this subdomain and the broader Rural Utility Cost network.
         </p>
       </header>
-      
-      <AdSensePlaceholder slot="disclaimer_top_ad" className="min-h-[90px]" />
 
       <div className="bg-white border border-[#DCD3C7] p-6 md:p-8 rounded-sm shadow-sm space-y-6 text-[#42372E] mx-auto w-full">
         <h2 className="text-xl font-bold flex items-center gap-2 border-b border-[#DCD3C7] pb-3">
@@ -57,8 +54,6 @@ export function Disclaimer() {
           </p>
         </div>
       </div>
-      
-      <AdSensePlaceholder slot="disclaimer_bottom_ad" className="min-h-[250px]" />
     </div>
   );
 }

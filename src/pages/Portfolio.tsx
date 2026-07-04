@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { getGroupedPortfolio } from '../data/parse-portfolio';
 import { Grid, ChevronRight, Anchor } from 'lucide-react';
-import { AdSensePlaceholder } from '../components/AdSensePlaceholder';
 
 export function Portfolio() {
   const categories = getGroupedPortfolio();
@@ -40,8 +39,6 @@ export function Portfolio() {
           While each module (like this Wood Hub) serves a specific agricultural or rural function, all data models adhere to the central <a href="https://ruralutilitycost.com" className="font-bold underline hover:text-[#5A4633] transition-colors text-[#5A4633]" target="_blank" rel="noopener noreferrer">Rural Utility Cost platform</a> standards. Navigate to the relevant sub-domain to find decision-support tools tailored for your operational requirements.
         </p>
       </section>
-      
-      <AdSensePlaceholder slot="portfolio_top_ad" className="min-h-[90px]" />
 
       {/* Portfolio Grid */}
       <div className="space-y-12 pb-12">
@@ -85,8 +82,6 @@ export function Portfolio() {
           </section>
         ))}
       </div>
-      
-      <AdSensePlaceholder slot="portfolio_bottom_ad" className="min-h-[250px]" />
     </div>
   );
 }

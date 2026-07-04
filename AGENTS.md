@@ -1,32 +1,211 @@
-# AI Agent Instructions for Rural Utility Cost Ecosystem
+# AI Agent Instructions for Rural Utility Cost
 
-This document provides system instructions for AI coding assistants working on the Rural Utility Cost platform and subdomains. Include this context in agent workflows to maintain consistency across the network.
+Act as a senior engineering manager, staff software engineer, and AI coding workflow architect. This file serves as the definitive instruction set for AI coding agents to ensure consistent, high-quality, and safe repository maintenance.
 
-## Project Context
-The Rural Utility Cost ecosystem consists of interconnected tools providing localized, specialized calculations across agricultural operations, predictive modeling, agronomy, construction, and rural infrastructure.
+## Purpose
+This repository is dedicated to the development and maintenance of the Rural Utility Cost Ecosystem (including Wood Hub). This file provides reusable, repo-level instructions to AI coding agents to ensure predictable, clean, and safe development.
 
-## Core Directives
+## Project Priorities
+- Build useful tools that solve specific, painful user workflows.
+- Keep UX practical, performant, and mobile-first.
+- Support growth and discoverability through specific, topically focused content.
+- Keep code simple, maintainable, and readable.
+- Make pages conversion-oriented and clear.
+- Avoid "platform" thinking or overengineering unless explicitly requested.
 
-1. **Strict Scope Discipline**
-   - Follow user intent exactly. Do not over-engineer or add unsolicited logic. 
-   - Keep applications lightweight and purpose-driven.
+## Agent Operating Rules
+- Work in small, incremental steps.
+- Do not rewrite unrelated files.
+- Preserve existing behavior unless intentionally changing it.
+- Prefer editing existing files over creating duplicates.
+- If blocked, leave a clear note in the code or task summary.
+- Do not invent fake APIs, integrations, or data structures.
+- Do not add dependencies unless necessary; explain why if you do.
+- Avoid unnecessary abstractions; favor simplicity.
+- Keep implementation production-minded.
+- Prefer semantic HTML, accessible UI, and clean structure.
+- Do not use placeholder marketing fluff.
+- Always make output specific to the project's domain when relevant.
 
-2. **UX & Design Language**
-   - Use Tailwind CSS.
-   - Employ clean, functional aesthetics typical of high-quality SaaS products or technical dashboards. 
-   - Use the designated warm/earth tone branding: colors like `#3D342C` (dark text), `#5A4633` (sub-headings), `#8C7A6B` (muted accents), `#DCD3C7` (borders), and `#E8E0D5`/`#F9F7F4` (backgrounds).
-   - Favor legible, structured typography (e.g. sans-serif UI standard with sparse serif/display for critical hubs or headers).
+## Product and UX Rules
+- Each feature must solve one narrow, painful workflow.
+- Every page must explain the problem and solution in under 5 seconds.
+- Mobile-first is mandatory.
+- Avoid generic startup language and SaaS-isms.
+- Avoid purple/blue AI gradients, glassmorphism, and generic icon grids.
+- Use a practical, outcome-driven design. Use the designated warm/earth tone branding: colors like `#3D342C` (dark text), `#5A4633` (sub-headings), `#8C7A6B` (muted accents), `#DCD3C7` (borders), and `#E8E0D5`/`#F9F7F4` (backgrounds).
+- Copy must be plainspoken and action-oriented.
+- Structure pages around problems, workflows, trust, and clear CTAs.
+- Ensure pages are easy to scan.
+- Use strong visual hierarchy.
+- Keep forms short, useful, and error-tolerant.
 
-3. **Data Integrity & Computations**
-   - Treat computational models as serious estimation tools. 
-   - Ensure the UI handles edge cases and invalid inputs gracefully. 
-   - Include robust validation logic for numerical fields. 
+## SEO and Content Rules
+- One primary keyword theme per page.
+- One H1 only.
+- Use descriptive title tags and meta descriptions.
+- Use internal links to related tools and guide pages.
+- Add FAQ sections when relevant.
+- Use natural-language headings.
+- Write for real users first, search engines second.
+- Avoid keyword stuffing.
+- Favor problem-based search intent.
+- Keep pages topically focused.
+- Tool pages must include: Definition, Who-it’s-for, What-problem-it-solves, Core features, and FAQ structure.
 
-4. **Component Reusability**
-   - Extract generic components (like input fields, headers, legal disclaimers, or layout wrappers) to `src/components/`. 
-   - Ensure the unified `Layout` component wraps all root routes, ensuring header and footer cohesion.
+## Code Style and Implementation Preferences
+- Use Tailwind CSS.
+- Keep components small, readable, and reusable.
+- Use descriptive naming conventions.
+- Avoid magic constants.
+- Prefer explicit logic over clever, hidden shortcuts.
+- Keep CSS organized; do not over-nest styles.
+- Avoid giant files.
+- Preserve accessibility (semantic HTML, alt tags, focus management).
+- Minimize JavaScript where HTML/CSS is sufficient.
+- Use comments only where they add real, non-obvious value.
+- Prefer production-ready code over demo hacks.
 
-5. **Legal & Compliance Rules**
-   - Never remove or obscure the disclaimer, Terms of Use, Privacy Policy, or Contact links from the shared footer.
-   - The `<CalculatorDisclaimer />` piece must be rendered under all active modeling tools.
-   - Do not replace professional advice (always insert standard disclaimers).
+## File and Folder Expectations
+- Keep names descriptive and kebab-case (except for React components which are PascalCase).
+- Shared components: `/src/components/`
+- Tool apps: `/src/pages/tools/`
+- Do not create duplicate versions of the same component.
+- Prefer predictable, logical file locations.
+
+## Build Workflow
+- Understand the task requirements clearly.
+- Inspect existing files to identify patterns.
+- Reuse existing patterns and components already in the repo (like `<CalculatorDisclaimer />`).
+- Implement the smallest, correct change possible.
+- Review for UX, SEO, and accessibility compliance.
+- Run tests/linting if available.
+- Summarize what changed in your output.
+- Avoid broad, speculative rewrites.
+
+## Testing and Validation
+- Run tests and lint if present.
+- Check mobile layout responsiveness.
+- Check for console errors.
+- Validate heading hierarchy (H1, H2, H3).
+- Validate CTA visibility and link functionality.
+- Validate forms and error states.
+- Ensure no placeholder text remains.
+- Check accessibility basics (aria-labels, contrast).
+- If commands are unknown, inspect `package.json` scripts rather than guessing.
+
+## Safety and Change Control
+
+### Hard Stop Rules
+- Default rule: Do not delete, overwrite, rename, move, replace, or broadly refactor existing work without explicit user consent.
+- Never delete any file without explicit user approval.
+- Never overwrite or replace an existing file wholesale without explicit user approval.
+- Never rename or move files/folders without explicit user approval.
+- Never perform destructive refactors without explicit user approval.
+- Never remove “unused” code, files, styles, content, or assets unless the user explicitly asks for cleanup.
+- Never rewrite large sections of a file if a targeted edit can solve the task.
+- Never remove or obscure the disclaimer, Terms of Use, Privacy Policy, or Contact links from the shared footer.
+
+### Approval Required Before Proceeding
+Any of the following changes require explicit consent:
+- Deleting files
+- Overwriting files
+- Replacing page copy
+- Moving folders
+- Renaming files
+- Broad refactors
+- Dependency updates
+- Config changes (deployment, env, db, auth, billing, analytics, SEO, routing)
+- Schema/data changes
+
+### Safe Editing Rules
+- Make the smallest correct change to achieve the goal.
+- Preserve user work; do not "fix" out-of-scope issues silently.
+- Edit in place when possible.
+- Leave notes instead of fixing out-of-scope issues.
+- Create backups before risky replacement if you must replace.
+- Prefer additive changes over destructive changes.
+- If touching a sensitive file, minimize edits and preserve existing formatting.
+- If an implementation looks wrong but is outside the requested scope, leave a note.
+- No silent side effects. No stealth cleanup. No opportunistic refactors.
+- Do not remove comments, docs, or content unless directly relevant to the task.
+- Protect user-authored work by default.
+
+## Change Summary Rules
+- State which files you plan to touch.
+- State whether any existing content will be replaced.
+- Explicitly ask for approval if your plan involves risky changes.
+- State potential risks before executing any risky operation.
+
+## Prompting and Collaboration Rules
+- This repo is used with "vibe coding" agents; assume high context, but be explicit about constraints.
+- Follow structured instructions carefully.
+- Return organized summaries of all changes.
+- State assumptions when forced to make them.
+- Do not ask unnecessary clarifying questions if the task is actionable.
+- Break work into sections and maintain clean implementation logic.
+
+## Definition of Done
+- Task goal met.
+- No broken layouts.
+- No placeholder copy remains.
+- Mobile-friendly.
+- Accessible basics covered.
+- SEO basics covered.
+- No regressions introduced.
+- Code is readable and maintainable.
+- Summary of changes is ready.
+
+## The Ultimate Operating System
+
+A battle-tested system to make Vibe Code Agents work smarter, faster, and with zero guesswork.
+
+### Workflow Orchestration
+
+1. **Plan Mode Default**
+- Enter plan mode for any non-trivial task (3+ steps or architectural decisions).
+- If something goes sideways, STOP and re-plan immediately.
+- Use plan mode for verification steps, not just building.
+- Write detailed specs upfront to reduce ambiguity.
+
+2. **Subagent Strategy**
+- Use subagents liberally to keep the main context window clean.
+- Offload research, exploration, and parallel analysis to subagents.
+- For complex problems, throw more compute at it via subagents.
+- One task per subagent for focused execution.
+
+3. **Self-Improvement Loop**
+- After any correction from the user, update `tasks/lessons.md` with the pattern.
+- Write rules for yourself that prevent the same mistake.
+- Ruthlessly iterate on these lessons until the mistake rate drops.
+- Review lessons at session start for relevant project context.
+
+4. **Verification Before Done**
+- Never mark a task complete without proving it works.
+- Diff behavior between main and your changes when relevant.
+- Ask yourself: "Would a staff engineer approve this?"
+- Run tests, check logs, demonstrate correctness.
+
+5. **Demand Elegance (Balanced)**
+- For non-trivial changes, pause and ask: "Is there a more elegant way?"
+- If a fix feels hacky: "Knowing everything I know now, implement the elegant solution."
+- Skip this for simple, obvious fixes — don't over-engineer.
+- Challenge your own work before presenting it.
+
+6. **Autonomous Bug Fixing**
+- When given a bug report: just fix it.
+- Don't ask for hand-holding.
+- Point at logs, errors, failing tests — then resolve them.
+- Zero context switching required from the user.
+- Go fix failing CI tests without being told how.
+
+### Golden Rule
+Be proactive. Think like an owner. Act like a senior engineer. Never make me repeat myself.
+
+### Task Management
+1. Plan first: Write plan to `tasks/todo.md` with checkable items.
+2. Verify plan: Check in before starting implementation.
+3. Track progress: Mark items complete as you go.
+4. Explain changes: High-level summary at each step.
+5. Document results: Add review section to `tasks/todo.md`.
+6. Capture lessons: Update `tasks/lessons.md` after corrections.

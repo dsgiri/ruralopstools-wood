@@ -1,0 +1,13 @@
+--- tasks/todo.md
++++ tasks/todo.md
+@@ -7,8 +7,10 @@
+ - [x] Integrate Ultimate Operating System guidelines into `AGENTS.md`
+ - [x] Remove AdSensePlaceholder component and references
+ - [x] Create reusable calculator prompt template
++- [x] Run every active calculator against the new standard
+ 
+ ## Review & Results
+-- Task: Created a reusable master prompt template `CALCULATOR-PROMPT-TEMPLATE.md` to ensure consistency in future calculator additions.
+-- Result: Delivered the template with shared principles, parameterized lists, and usage instructions according to project standards.
++- Task: Reviewed all existing calculators (`BoardFootCalculator.tsx`) against `CALCULATOR-STANDARD.md` and `CALCULATOR-PROMPT-TEMPLATE.md`.
++- Result: Added missing Above the Fold descriptions, Primary CTA (Print Summary), How It Works, Definitions, FAQ, and Related Tools sections. `BoardFootCalculator.tsx` is now fully compliant.

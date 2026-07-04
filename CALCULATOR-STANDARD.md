@@ -15,7 +15,6 @@ This document outlines the design and implementation standards for all calculato
 
 3. **Required Components**
    - Every calculator MUST integrate the `CalculatorDisclaimer` component positioned prominently below the final results.
-   - The UI MUST use `AdSensePlaceholder` slots to account for monetization areas without breaking the layout or obscuring essential functionality. 
 
 4. **Accessibility**
    - All inputs must have associated native HTML attributes, specific IDs, and screen-readable labels.

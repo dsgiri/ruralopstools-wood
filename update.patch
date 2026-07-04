@@ -1,0 +1,134 @@
+--- src/pages/tools/BoardFootCalculator.tsx
++++ src/pages/tools/BoardFootCalculator.tsx
+@@ -1,7 +1,8 @@
+ import { useState } from 'react';
+-import { Calculator, AlertTriangle, FileCheck, CheckCircle2 } from 'lucide-react';
++import { Calculator, AlertTriangle, FileCheck, CheckCircle2, Printer, ChevronDown } from 'lucide-react';
+ import { CalculatorDisclaimer } from '../../components/CalculatorDisclaimer';
++import { Link } from 'react-router-dom';
+ 
+ export function BoardFootCalculator() {
+   const [thickness, setThickness] = useState<number>(1);
+   const [width, setWidth] = useState<number>(6);
+@@ -14,14 +15,22 @@
+   const totalBdFt = (thickness * width * length) / 12 * quantity;
+   
+   // Highlight red flag if parameters look extremely unusual for standard milling
+   const isAlertThreshold = thickness > 12 || width > 24 || length > 30;
+ 
++  const [openFaq, setOpenFaq] = useState<number | null>(null);
++
++  const toggleFaq = (index: number) => {
++    setOpenFaq(openFaq === index ? null : index);
++  };
++
+   return (
+-    <div className="space-y-6 sm:space-y-8 px-4 sm:px-6 md:px-8 py-6 sm:py-8 flex-1 w-full max-w-6xl mx-auto">
++    <div className="space-y-12 px-4 sm:px-6 md:px-8 py-6 sm:py-8 flex-1 w-full max-w-6xl mx-auto">
++      {/* 1. Above the Fold (Immediate Access) */}
+       <div className="border-b border-[#DCD3C7] pb-4 flex items-center gap-3">
+         <div className="bg-[#F9F7F4] p-2 text-[#5A4633] border border-[#DCD3C7] rounded-sm shrink-0">
+           <Calculator className="w-6 h-6" />
+         </div>
+         <div>
+           <h1 className="text-2xl sm:text-3xl font-extrabold text-[#42372E] tracking-tight">Board Foot Calculator</h1>
+-          <p className="text-[#8C7A6B] mt-1 font-mono text-[10px] sm:text-xs uppercase">Compliance Module: T-BF-01</p>
++          <p className="text-[#5A4633] mt-1 text-sm sm:text-base">Quickly estimate the volume of lumber for your milling or woodworking projects.</p>
+         </div>
+       </div>
+ 
++      {/* 2. The Calculator Layout */}
+       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+         <div className="lg:col-span-2 bg-white border border-[#DCD3C7] p-5 sm:p-6 shadow-sm rounded-sm">
+           <h2 className="text-base sm:text-lg font-bold mb-6 flex items-center gap-2 border-b border-[#DCD3C7] pb-2 text-[#42372E]">
+@@ -109,12 +118,94 @@
+                 <span className="text-white/90 font-mono">0.00%</span>
+               </div>
+             </div>
++            
++            <button 
++              onClick={() => window.print()}
++              className="w-full mt-6 bg-[#FAF7F2] hover:bg-white text-[#5A4633] font-bold py-3 px-4 rounded-sm flex items-center justify-center gap-2 transition-colors border border-transparent hover:border-[#DCD3C7]"
++            >
++              <Printer className="w-4 h-4" />
++              Print Summary
++            </button>
+           </div>
+-          
++        </div>
++      </div>
++
++      {/* 3. Below the Fold (Supporting Context) */}
++      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 pt-8 border-t border-[#DCD3C7]">
++        <div className="space-y-8">
++          <section>
++            <h3 className="text-xl font-bold text-[#42372E] mb-4">How It Works</h3>
++            <ul className="space-y-3 text-sm text-[#5A4633]">
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Formula:</strong> Board Feet = (Thickness in inches × Width in inches × Length in feet) ÷ 12.</span></li>
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Multiplier:</strong> The result is then multiplied by the quantity of pieces.</span></li>
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Purpose:</strong> This provides an industry-standard volume measurement used for buying and selling lumber.</span></li>
++            </ul>
++          </section>
++
++          <section>
++            <h3 className="text-xl font-bold text-[#42372E] mb-4">Definitions & Assumptions</h3>
++            <ul className="space-y-3 text-sm text-[#5A4633]">
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Board Foot (BF):</strong> A unit of volume for timber equal to 144 cubic inches, nominally 12" × 12" × 1".</span></li>
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Nominal vs Actual:</strong> Calculations assume rough-sawn (nominal) dimensions before milling or surfacing.</span></li>
++              <li className="flex gap-2"><span className="font-bold shrink-0">•</span><span><strong>Zero Waste:</strong> The calculator assumes 0% milling waste. You must manually account for kerf and squaring loss.</span></li>
++            </ul>
++          </section>
++        </div>
++
++        {/* 4. Trust and Engagement Elements */}
++        <div className="space-y-8">
++          <section>
++            <h3 className="text-xl font-bold text-[#42372E] mb-4">Frequently Asked Questions</h3>
++            <div className="space-y-2">
++              {[
++                { q: "What is a board foot?", a: "A board foot is a specialized unit of measure for the volume of lumber in the United States and Canada. It is the volume of a one-foot length of a board one foot wide and one inch thick." },
++                { q: "How is it different from linear feet?", a: "Linear feet only measure length, ignoring thickness and width. Board feet measure total volume, which determines the actual amount of wood." },
++                { q: "Should I use nominal or actual dimensions?", a: "Softwood is typically sold by nominal dimensions (e.g., 2x4), while hardwood is often sold by board foot using rough, actual dimensions before surfacing." }
++              ].map((faq, i) => (
++                <div key={i} className="border border-[#DCD3C7] rounded-sm overflow-hidden bg-white">
++                  <button 
++                    onClick={() => toggleFaq(i)}
++                    className="w-full text-left px-4 py-3 font-bold text-sm text-[#42372E] flex items-center justify-between hover:bg-[#F9F7F4] transition-colors"
++                    aria-expanded={openFaq === i}
++                  >
++                    {faq.q}
++                    <ChevronDown className={`w-4 h-4 text-[#8C7A6B] transition-transform ${openFaq === i ? 'rotate-180' : ''}`} aria-hidden="true" />
++                  </button>
++                  {openFaq === i && (
++                    <div className="px-4 py-3 text-sm text-[#5A4633] border-t border-[#DCD3C7] bg-[#FAF7F2]">
++                      {faq.a}
++                    </div>
++                  )}
++                </div>
++              ))}
++            </div>
++          </section>
++
++          <section>
++            <h3 className="text-xl font-bold text-[#42372E] mb-4">Related Tools</h3>
++            <div className="space-y-3">
++              <Link to="/" className="block border border-[#DCD3C7] p-4 rounded-sm bg-white hover:border-[#5A4633] transition-colors group">
++                <strong className="block text-[#42372E] group-hover:text-[#5A4633] transition-colors">Wood Hub Dashboard</strong>
++                <span className="text-sm text-[#8C7A6B]">Explore all our lumber and woodworking calculators.</span>
++              </Link>
++              <a href="https://ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block border border-[#DCD3C7] p-4 rounded-sm bg-white hover:border-[#5A4633] transition-colors group">
++                <strong className="block text-[#42372E] group-hover:text-[#5A4633] transition-colors">Rural Utility Cost Platform</strong>
++                <span className="text-sm text-[#8C7A6B]">Master hub for agricultural and utility estimation tools.</span>
++              </a>
++            </div>
++          </section>
++        </div>
++      </div>
++
++      <div className="pt-8 border-t border-[#DCD3C7]">
+           <CalculatorDisclaimer />
+-        </div>
+       </div>
+     </div>
+   );
+ }
