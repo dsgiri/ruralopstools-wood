@@ -25,7 +25,7 @@ export function Portfolio() {
           </h1>
         </div>
         <p className="text-sm sm:text-base text-[#8C7A6B] max-w-3xl leading-relaxed mt-4">
-          The Rural Utility Cost sub-domain network provides localized, specialized calculation tools across operations, predictive modeling, agronomy, and infrastructure. Browse the complete collection of active ecosystem hubs below.
+          The Rural Ops Tools sub-domain network provides localized, specialized calculation tools across operations, predictive modeling, agronomy, and infrastructure. Browse the complete collection of active ecosystem hubs below.
         </p>
       </header>
 
@@ -36,7 +36,7 @@ export function Portfolio() {
           Master Hub & Ecosystem Overview
         </h2>
         <p className="leading-relaxed">
-          While each module (like this Wood Hub) serves a specific agricultural or rural function, all data models adhere to the central <a href="https://ruralutilitycost.com" className="font-bold underline hover:text-[#5A4633] transition-colors text-[#5A4633]" target="_blank" rel="noopener noreferrer">Rural Utility Cost platform</a> standards. Navigate to the relevant sub-domain to find decision-support tools tailored for your operational requirements.
+          While each module (like this Wood Hub) serves a specific agricultural or rural function, all data models adhere to the central <a href="https://ruralopstools.com" className="font-bold underline hover:text-[#5A4633] transition-colors text-[#5A4633]" target="_blank" rel="noopener noreferrer">Rural Ops Tools platform</a> standards. Navigate to the relevant sub-domain to find decision-support tools tailored for your operational requirements.
         </p>
       </section>
 
@@ -72,7 +72,7 @@ export function Portfolio() {
                   </p>
                   <div className="mt-4 pt-3 border-t border-stone-100 flex justify-between items-center text-[#5A4633]">
                     <span className="text-[10px] font-bold uppercase tracking-widest opacity-70 border border-[#DCD3C7] px-2 py-0.5 bg-[#F9F7F4] rounded-sm">
-                      {new URL(site.url).hostname.replace('.ruralutilitycost.com', '') === 'ruralutilitycost' ? 'Platform' : new URL(site.url).hostname.replace('.ruralutilitycost.com', '')}
+                      {new URL(site.url).hostname.replace('.ruralopstools.com', '') === 'ruralopstools' ? 'Platform' : new URL(site.url).hostname.replace('.ruralopstools.com', '')}
                     </span>
                     <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" aria-hidden="true" />
                   </div>

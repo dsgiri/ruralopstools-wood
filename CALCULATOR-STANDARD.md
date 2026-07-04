@@ -1,6 +1,6 @@
-# Rural Utility Cost - Calculator Standard
+# Rural Ops Tools - Calculator Standard
 
-This document outlines the design and implementation standards for all calculators and estimators developed for the Rural Utility Cost subdomain network.
+This document outlines the design and implementation standards for all calculators and estimators developed for the Rural Ops Tools subdomain network.
 
 ## Core Design Principles
 

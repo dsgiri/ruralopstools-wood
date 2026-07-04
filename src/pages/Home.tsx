@@ -14,7 +14,7 @@ export function Home() {
           <h1 className="text-3xl sm:text-4xl font-serif italic text-[#42372E] mb-2 leading-tight">Lumber & Timber Resource Hub</h1>
           <p className="text-sm sm:text-base text-[#8C7A6B] max-w-2xl leading-relaxed">
             Professional-grade calculators for sawyers, woodworkers, and timber owners. 
-            Part of the <span className="font-semibold text-[#5A4633]">Rural Utility Cost</span> ecosystem.
+            Part of the <span className="font-semibold text-[#5A4633]">Rural Ops Tools</span> ecosystem.
           </p>
         </div>
       </header>

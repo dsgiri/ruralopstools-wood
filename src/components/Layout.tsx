@@ -5,10 +5,10 @@ import { ShieldCheck, HardHat, FileText, Anchor } from 'lucide-react';
 import { FOOTER_LINKS } from '../config/footerLinks';
 
 const NAV_LINKS = [
-  { path: '/plan', label: 'Plan', isExternal: true },
-  { path: '/forecast', label: 'Forecast', isExternal: true },
-  { path: '/what-if', label: 'What If', isExternal: true },
-  { path: '/predictor', label: 'Predictor', isExternal: true },
+  { path: 'https://plan.ruralopstools.com/', label: 'Plan', isExternal: true },
+  { path: 'https://forecast.ruralopstools.com/', label: 'Forecast', isExternal: true },
+  { path: 'https://whatif.ruralopstools.com/', label: 'What If', isExternal: true },
+  { path: 'https://predictor.ruralopstools.com/', label: 'Predictor', isExternal: true },
   { path: '/favorites', label: 'My favorites' },
 ];
 
@@ -24,7 +24,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <div className="w-4 h-4 border-2 border-white rotate-45"></div>
           </div>
           <div className="truncate">
-            <span className="font-bold text-sm tracking-tight text-[#5A4633]">RURAL UTILITY COST</span>
+            <span className="font-bold text-sm tracking-tight text-[#5A4633]">RURAL OPS TOOLS</span>
             <span className="mx-2 text-[#DCD3C7]">|</span>
             <span className="font-semibold text-sm uppercase tracking-widest text-[#8C7A6B]">Wood</span>
           </div>
@@ -88,7 +88,7 @@ export function Layout({ children }: { children: ReactNode }) {
         </div>
         <div className="text-[10px] italic opacity-80 text-center md:text-right max-w-sm ml-auto text-[#8C7A6B]">
           <span className="block mb-1">Disclaimer: These figures are estimates. This tool does not replace professional advice. We disclaim all liability. <Link to="/disclaimer" className="underline hover:text-white transition-colors">Read Full Disclaimer</Link>.</span>
-          &copy; {new Date().getFullYear()} Rural Utility Cost
+          &copy; {new Date().getFullYear()} Rural Ops Tools
         </div>
       </footer>
     </div>

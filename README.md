@@ -1,6 +1,6 @@
-# Rural Utility Cost - Wood Hub
+# Rural Ops Tools - Wood Hub
 
-This repository powers the **Wood Hub** (`wood.ruralutilitycost.com`), a dedicated lumber, timber, and woodworking estimation engine within the Rural Utility Cost ecosystem.
+This repository powers the **Wood Hub** (`wood.ruralopstools.com`), a dedicated lumber, timber, and woodworking estimation engine within the Rural Ops Tools ecosystem.
 
 ## Overview
 
@@ -21,8 +21,8 @@ This is a Vite-powered React application using TypeScript and Tailwind CSS.
 ### Installation
 
 ```bash
-git clone https://github.com/dsgiri/RuralUtilityCost-Wood.git
-cd RuralUtilityCost-Wood
+git clone https://github.com/dsgiri/RuralOpsTools-Wood.git
+cd RuralOpsTools-Wood
 npm install
 ```
 
@@ -61,16 +61,16 @@ cp .env.example .env
 
 *(Currently, core calculators are fully client-side and require no external environment secrets. Any additions should be documented in `.env.example`.)*
 
-## Related Rural Utility Cost Links
+## Related Rural Ops Tools Links
 
 The Wood Hub operates as a dedicated node within the broader network of agricultural and rural utility tools.
 
-- **Main Platform:** [ruralutilitycost.com](https://ruralutilitycost.com)
-- **Network Portfolio:** [ruralutilitycost.com/portfolio](https://ruralutilitycost.com/portfolio)
-- **Repository:** [RuralUtilityCost-Wood](https://github.com/dsgiri/RuralUtilityCost-Wood)
+- **Main Platform:** [ruralopstools.com](https://ruralopstools.com)
+- **Network Portfolio:** [ruralopstools.com/portfolio](https://ruralopstools.com/portfolio)
+- **Repository:** [RuralOpsTools-Wood](https://github.com/dsgiri/RuralOpsTools-Wood)
 
 **Closely Related Subdomains:**
-- [Platform Hub](https://ruralutilitycost.com) — Master hub for rural, agricultural, and utility estimation tools.
-- [Forecast Hub](https://forecast.ruralutilitycost.com) — Predictive models for rural utility economics.
-- [Solve Engine](https://solve.ruralutilitycost.com) — General problem-solving and utility computation engine.
-- [Plan Hub](https://plan.ruralutilitycost.com) — Long-term operational and resource planning schedules.
+- [Platform Hub](https://ruralopstools.com) — Master hub for rural, agricultural, and utility estimation tools.
+- [Forecast Hub](https://forecast.ruralopstools.com) — Predictive models for rural utility economics.
+- [Solve Engine](https://solve.ruralopstools.com) — General problem-solving and utility computation engine.
+- [Plan Hub](https://plan.ruralopstools.com) — Long-term operational and resource planning schedules.

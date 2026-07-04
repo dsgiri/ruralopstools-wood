@@ -1,7 +1,7 @@
 # Storage Reusable Calculator Page Master Prompt
 
 ## 1. Purpose of this template
-This master prompt template is designed to instruct AI coding agents to build consistent, launch-ready calculator pages for the **Storage — Rural Utility Cost** ecosystem. By using a standardized parameter set and strict instructions, this template ensures all future calculators adhere to the same UI/UX patterns, code architecture, and trust models established by the Grain Bin Capacity Estimator, eliminating feature creep and design fragmentation.
+This master prompt template is designed to instruct AI coding agents to build consistent, launch-ready calculator pages for the **Storage — Rural Ops Tools** ecosystem. By using a standardized parameter set and strict instructions, this template ensures all future calculators adhere to the same UI/UX patterns, code architecture, and trust models established by the Grain Bin Capacity Estimator, eliminating feature creep and design fragmentation.
 
 ## 2. Design and product principles
 - **Practical Tone:** Use plainspoken, outcome-driven language. Avoid marketing fluff, SaaS-isms, or exaggerated claims.
@@ -69,7 +69,7 @@ Before running the master prompt, fill in the following parameters:
 ## 9. Reusable master prompt template
 
 ```markdown
-I am planning to implement the **{{CALCULATOR_NAME}}** page. Based on the established "Storage — Rural Utility Cost" digital calculator layout and standards, please build this page following a strict Plan-Implement-Validate (PIV) workflow.
+I am planning to implement the **{{CALCULATOR_NAME}}** page. Based on the established "Storage — Rural Ops Tools" digital calculator layout and standards, please build this page following a strict Plan-Implement-Validate (PIV) workflow.
 
 **Context & Setup:**
 - **Page Name:** {{CALCULATOR_NAME}}

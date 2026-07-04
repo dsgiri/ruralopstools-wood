@@ -8,7 +8,8 @@
 - [x] Remove AdSensePlaceholder component and references
 - [x] Create reusable calculator prompt template
 - [x] Run every active calculator against the new standard
+- [x] Change all references from RuralUtilityCost to RuralOpsTools
 
 ## Review & Results
-- Task: Reviewed all existing calculators (`BoardFootCalculator.tsx`) against `CALCULATOR-STANDARD.md` and `CALCULATOR-PROMPT-TEMPLATE.md`.
-- Result: Added missing Above the Fold descriptions, Primary CTA (Print Summary), How It Works, Definitions, FAQ, and Related Tools sections. `BoardFootCalculator.tsx` is now fully compliant.
+- Task: Refactored all mentions of "Rural Utility Cost" and "ruralutilitycost" to "Rural Ops Tools" and "ruralopstools" respectively across the entire project.
+- Result: Standardized the new naming convention across content, URLs, titles, and agent prompts.

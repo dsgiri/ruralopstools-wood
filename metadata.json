@@ -1,6 +1,6 @@
 {
-  "name": "Wood Hub - Rural Utility Cost",
-  "description": "Lumber, timber, and woodworking estimation hub for the Rural Utility Cost ecosystem. Includes calculators for board feet, log volume, and pricing.",
+  "name": "Wood Hub - Rural Ops Tools",
+  "description": "Lumber, timber, and woodworking estimation hub for the Rural Ops Tools ecosystem. Includes calculators for board feet, log volume, and pricing.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

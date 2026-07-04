@@ -1,9 +1,9 @@
-# AI Agent Instructions for Rural Utility Cost
+# AI Agent Instructions for Rural Ops Tools
 
 Act as a senior engineering manager, staff software engineer, and AI coding workflow architect. This file serves as the definitive instruction set for AI coding agents to ensure consistent, high-quality, and safe repository maintenance.
 
 ## Purpose
-This repository is dedicated to the development and maintenance of the Rural Utility Cost Ecosystem (including Wood Hub). This file provides reusable, repo-level instructions to AI coding agents to ensure predictable, clean, and safe development.
+This repository is dedicated to the development and maintenance of the Rural Ops Tools Ecosystem (including Wood Hub). This file provides reusable, repo-level instructions to AI coding agents to ensure predictable, clean, and safe development.
 
 ## Project Priorities
 - Build useful tools that solve specific, painful user workflows.

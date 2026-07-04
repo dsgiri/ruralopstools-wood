@@ -25,7 +25,7 @@ export function CookieConsent() {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-[#3D342C] text-[#DCD3C7] p-4 z-50 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
       <div className="text-sm">
-        <p>We use cookies to improve your experience, analyze site traffic, and serve targeted advertisements. By continuing to use this site, you consent to our use of cookies in accordance with our <a href="https://ruralutilitycost.com/privacy-policy" target="_blank" rel="noreferrer" className="underline hover:text-white">Privacy Policy</a>.</p>
+        <p>We use cookies to improve your experience, analyze site traffic, and serve targeted advertisements. By continuing to use this site, you consent to our use of cookies in accordance with our <a href="https://ruralopstools.com/privacy-policy" target="_blank" rel="noreferrer" className="underline hover:text-white">Privacy Policy</a>.</p>
       </div>
       <button 
         onClick={accept}

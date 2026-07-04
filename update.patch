@@ -116,8 +116,8 @@
 +                <strong className="block text-[#42372E] group-hover:text-[#5A4633] transition-colors">Wood Hub Dashboard</strong>
 +                <span className="text-sm text-[#8C7A6B]">Explore all our lumber and woodworking calculators.</span>
 +              </Link>
-+              <a href="https://ruralutilitycost.com" target="_blank" rel="noopener noreferrer" className="block border border-[#DCD3C7] p-4 rounded-sm bg-white hover:border-[#5A4633] transition-colors group">
-+                <strong className="block text-[#42372E] group-hover:text-[#5A4633] transition-colors">Rural Utility Cost Platform</strong>
++              <a href="https://ruralopstools.com" target="_blank" rel="noopener noreferrer" className="block border border-[#DCD3C7] p-4 rounded-sm bg-white hover:border-[#5A4633] transition-colors group">
++                <strong className="block text-[#42372E] group-hover:text-[#5A4633] transition-colors">Rural Ops Tools Platform</strong>
 +                <span className="text-sm text-[#8C7A6B]">Master hub for agricultural and utility estimation tools.</span>
 +              </a>
 +            </div>
