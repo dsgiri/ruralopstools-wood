@@ -8,6 +8,13 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Favorites } from './pages/Favorites';
 import { BoardFootCalculator } from './pages/tools/BoardFootCalculator';
+import { LogVolumeCalculator } from './pages/tools/LogVolumeCalculator';
+import { LumberCostEstimator } from './pages/tools/LumberCostEstimator';
+import { TimberYieldCalculator } from './pages/tools/TimberYieldCalculator';
+import { KilnDryingEstimator } from './pages/tools/KilnDryingEstimator';
+import { WoodShrinkageCalculator } from './pages/tools/WoodShrinkageCalculator';
+import { WoodworkingPricing } from './pages/tools/WoodworkingPricing';
+import { RoughCutPlanner } from './pages/tools/RoughCutPlanner';
 import { Portfolio } from './pages/Portfolio';
 import { Disclaimer } from './pages/Disclaimer';
 
@@ -37,6 +44,14 @@ export default function App() {
           
           {/* Tools */}
           <Route path="/tools/board-foot" element={<BoardFootCalculator />} />
+          <Route path="/tools/log-volume" element={<LogVolumeCalculator />} />
+          <Route path="/tools/lumber-cost" element={<LumberCostEstimator />} />
+          <Route path="/tools/timber-yield" element={<TimberYieldCalculator />} />
+          <Route path="/tools/kiln-drying" element={<KilnDryingEstimator />} />
+          <Route path="/tools/wood-shrinkage" element={<WoodShrinkageCalculator />} />
+          <Route path="/tools/project-pricing" element={<WoodworkingPricing />} />
+          <Route path="/tools/rough-cut" element={<RoughCutPlanner />} />
+          
           <Route path="/tools/*" element={<ToolPlaceholder />} />
         </Routes>
       </Layout>
